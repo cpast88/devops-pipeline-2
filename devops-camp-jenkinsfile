@@ -55,7 +55,8 @@ pipeline {
         }
 	stage('Database docker build') {
 	 	steps {
-             		// TODO: (in a later step) build db image and push to harbor
+             		echo "database docker build"
+			// TODO: (in a later step) build db image and push to harbor
         	}
 		post {
         		// TODO: (in a later step) clean local db image build
