@@ -8,11 +8,11 @@ arguments, values = getopt.getopt(argList, options)
 for currentArgument, currentValue in arguments:
         if currentArgument in ("-c"):
                     username, password = currentValue.split(':')
-                        elif currentArgument in ("-i"):
+        elif currentArgument in ("-i"):
                                     imageName = currentValue
-                                        elif currentArgument in ("-p"):
+        elif currentArgument in ("-p"):
                                                     projectName = currentValue
-                                                        elif currentArgument in ("-r"):
+        elif currentArgument in ("-r"):
                                                                     registry = currentValue
 
                                                                     ## Grab sha256 digest from Harbor project repository ##
@@ -40,10 +40,10 @@ for currentArgument, currentValue in arguments:
                                                                                                         print(scanStatus)
                                                                                                             if scanStatus == 'Success':
                                                                                                                         break
-                                                                                                                        elif maxApiCall <= 0:
+                                                                                                            elif maxApiCall <= 0:
                                                                                                                                     print('Reached maximum API calls')
                                                                                                                                             sys.exit(-1)
-                                                                                                                                                else:
+                                                                                                            else:
                                                                                                                                                             maxApiCall -= 1
                                                                                                                                                                     time.sleep(4)
 
